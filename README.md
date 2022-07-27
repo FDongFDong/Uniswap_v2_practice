@@ -38,10 +38,21 @@ $ npm install
 
 `$ npm run ganache`
 
-### 4. Migrate Smart Contracts
+### 4. Start React
+`$ npm run start`
+
+### 5. Migrate Smart Contracts
 
 `$ npx truffle migrate --reset --skip-dry-run`
 
-### 5. Run Tests
+### Troubleshooting
+- truffle 버전을 확인해주세요
+-- trffle 배포가 안되면 src/abis 파일을 날리고 재배포 해주세요
+-- 그래도 안되면 앞에 sudo를 입력하고 해주세요
+-- 그래도 안되면 sudo rm -rf ~/Library/Preferences/truffle-nodejs 해당 파일을 삭제 후 package-json에 있는 truffle을 재설치 해주세요
 
-`$ npx truffle test`
+- ganache network를 사용하기 때문에 ganache가 먼저 켜져있어야 합니다.
+-- ganache 첫번째 계정 사용 - 메타마스크에서 가나슈 네트워크 생성 후 비밀키를 이용해 가나슈 계정 불러오기 -- 비밀키는 App.js에서 console에 찍어줌
+
+- 메타마스크에서 이더리움 전송 시 RPC Error가 뜨면 계정을 초기화해주세요
+-- https://ethereum.stackexchange.com/questions/30921/tx-doesnt-have-the-correct-nonce-metamask
